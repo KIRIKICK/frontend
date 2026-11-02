@@ -1,0 +1,186 @@
+.header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 0 24px;
+  font-size: 24px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 20px 20px calc(32px + var(--safe-bottom));
+}
+
+.title {
+  margin: 0;
+  padding: 0 4px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.3px;
+  color: var(--ink-strong);
+  overflow-wrap: anywhere;
+}
+
+.kicks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kickCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 96px;
+  padding: 18px 16px 18px 18px;
+  border: 0;
+  border-radius: 22px;
+  text-align: left;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.kickCard > svg {
+  flex-shrink: 0;
+}
+
+.kickIcon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kickText {
+  flex: 1 0 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kickText strong {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.3;
+  color: var(--ink-strong);
+}
+
+.kickText span {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-sub);
+}
+
+.purple {
+  background: var(--primary-soft);
+}
+
+.purple .kickIcon {
+  background: var(--primary);
+  color: #fff;
+}
+
+.purple > svg {
+  color: var(--primary);
+}
+
+.yellow {
+  background: var(--yellow-soft);
+}
+
+.yellow .kickIcon {
+  background: var(--yellow);
+  color: var(--ink-strong);
+}
+
+.yellow > svg {
+  color: var(--ink-strong);
+}
+
+.rooms {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rooms h2 {
+  margin: 0;
+  padding: 0 4px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+}
+
+.empty {
+  flex: 1 0 0;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 20px;
+  border: 1.5px dashed var(--line-dashed);
+  border-radius: 22px;
+  background: var(--surface);
+}
+
+.empty p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.up2 {
+  animation: kk-up 0.5s var(--ease-out) 0.1s both;
+}
+
+.up3 {
+  animation: kk-up 0.5s var(--ease-out) 0.2s both;
+}
+
+.up4 {
+  animation: kk-up 0.5s var(--ease-out) 0.3s both;
+}
+
+.bob {
+  animation: bob 2.4s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}

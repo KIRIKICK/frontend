@@ -1,0 +1,59 @@
+/* 모든 화면이 공유하는 세로 레이아웃: 헤더 · 본문(늘어남) · 하단 */
+.screen {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.logo {
+  font-family: var(--font-display);
+  line-height: 1.3;
+  color: var(--ink-strong);
+}
+
+.iconButton {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.primaryButton {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.12s var(--ease-out);
+}
+
+.primaryButton:disabled {
+  background: var(--disabled-bg);
+  color: var(--disabled-fg);
+  cursor: default;
+}
+
+.up {
+  animation: kk-up 0.5s var(--ease-out) both;
+}

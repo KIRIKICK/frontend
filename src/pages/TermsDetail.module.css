@@ -1,0 +1,108 @@
+.screen {
+  height: 100dvh;
+  background: var(--surface);
+  animation: slide-in 0.35s var(--ease-out) both;
+}
+
+.header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+}
+
+.spacer {
+  width: 44px;
+}
+
+.main {
+  flex: 1 0 0;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 24px 20px calc(40px + var(--safe-bottom));
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.effective {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.articles section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.articles h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.articles section p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.table {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.table > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+}
+
+.table > div + div {
+  border-top: 1px solid var(--line);
+}
+
+.table dt {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.table dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
